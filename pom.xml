@@ -3,18 +3,5 @@
   <groupId>ISA2</groupId>
   <artifactId>try</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.8.0</version> <!-- Use the latest version -->
-            <configuration>
-                <source>1.7</source> <!-- Update to a compatible source version (e.g., 1.8, 9, 10, etc.) -->
-                <target>1.7</target> <!-- Update to a compatible target version (e.g., 1.8, 9, 10, etc.) -->
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
 
 </project>
