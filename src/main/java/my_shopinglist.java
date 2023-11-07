@@ -10,15 +10,15 @@ public class my_shopinglist {
 
     public void addItem(String item) {
         items.add(item);
-        System.out.println(item + " has been added to the shopping list.");
+        System.out.println(item + " è stato aggiunto alla shopping list.\n");
     }
 
     public void removeItem(String item) {
         if (items.contains(item)) {
             items.remove(item);
-            System.out.println(item + " has been removed from the shopping list.");
+            System.out.println(item + " è stato cancellato della shopping list.\n");
         } else {
-            System.out.println(item + " is not in the shopping list.");
+            System.out.println(item + " non è nella shopping list.\n");
         }
     }
 
@@ -29,32 +29,32 @@ public class my_shopinglist {
 
     public void startShopping() {
         while (true) {
-            System.out.println("Options:");
-            System.out.println("1. Add item to the shopping list");
-            System.out.println("2. Remove item from the shopping list");
-            System.out.println("3. View shopping list");
-            System.out.println("4. Exit");
+            System.out.println("Opzioni:");
+            System.out.println("1. Aggiungere un articolo alla shopping List");
+            System.out.println("2. Cancellare un articolo della shapping List");
+            System.out.println("3. Visualizzare la shopping List");
+            System.out.println("4. Esci");
 
             int choice = scanner.nextInt();
             scanner.nextLine(); // Consume the newline
 
             switch (choice) {
                 case 1:
-                    System.out.print("Enter the item to add: ");
+                    System.out.print("Scriver l'articolo da aggiungere: ");
                     addItem(scanner.nextLine());
                     break;
                 case 2:
-                    System.out.print("Enter the item to remove: ");
+                    System.out.print("Scrivere l'articolo da cancellare: ");
                     removeItem(scanner.nextLine());
                     break;
                 case 3:
                     viewItems();
                     break;
                 case 4:
-                    System.out.println("Exiting shopping list.");
+                    System.out.println("Uscita della shopping List.");
                     return;
                 default:
-                    System.out.println("Invalid choice. Try again.");
+                    System.out.println("Non valido, prova di nuovo!");
             }
         }
     }
