@@ -6,14 +6,14 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("Choose an application to open:");
+            System.out.println("Scegliere un'applicazione:");
             System.out.println("1. Shopping List");
-            System.out.println("2. Maintenance Activities");
+            System.out.println("2. Manutenzione");
             System.out.println("3. Reminder");
             System.out.println("4. Exit");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline
+            scanner.nextLine(); 
 
             switch (choice) {
                 case 1:
@@ -26,18 +26,18 @@ public class Main {
                     break;
                 case 3:
                     reminder reminder = new reminder();
-                    System.out.print("Enter the reminder message: ");
+                    System.out.print("Aggiungere il messagio Reminder: ");
                     String message = scanner.nextLine();
-                    System.out.print("Enter the delay in seconds: ");
+                    System.out.print("Aggiungere il delay in secondi: ");
                     int delay = scanner.nextInt();
                     reminder.addReminder(message, delay);
                     break;
                 case 4:
-                    System.out.println("Exiting the application.");
+                    System.out.println("Uscita dell'applicazione.");
                     scanner.close();
                     System.exit(0);
                 default:
-                    System.out.println("Invalid choice. Try again.");
+                    System.out.println("Non valido, prova di nuovo.");
             }
         }
     }
