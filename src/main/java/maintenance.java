@@ -13,7 +13,16 @@ public class maintenance {
         System.out.println(activity + " è stato aggiunto alla lista di attività.");
     }
 
-    public List<String> checkUncompletedActivities() {
+   public List<String> checkUncompletedActivities() {
+    	if (activities.isEmpty()) {
+            System.out.println("La lista di attività è vuota.\n");
+        } else {
+            System.out.println("Ecco le attività non completate:");
+            for (String activity : activities) {
+                System.out.println("- " + activity);
+            }
+            System.out.println();
+        }
         return activities; 
     }
 
