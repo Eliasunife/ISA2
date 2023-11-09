@@ -23,7 +23,7 @@ public class my_shopinglist {
     }
 
     public List<String> viewItems() {
-        return items; // Return the list of items.
+        return items; 
     }
     
 
@@ -36,7 +36,7 @@ public class my_shopinglist {
             System.out.println("4. Esci");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
