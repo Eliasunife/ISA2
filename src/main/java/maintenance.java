@@ -10,50 +10,50 @@ public class maintenance {
 
     public void addActivity(String activity) {
         activities.add(activity);
-        System.out.println(activity + " has been added to maintenance activities.");
+        System.out.println(activity + " è stato aggiunto alla lista di attività.");
     }
 
     public List<String> checkUncompletedActivities() {
-        return activities; // Return the list of activities.
+        return activities; 
     }
 
     public void markActivityCompleted(String activity) {
         if (activities.contains(activity)) {
             activities.remove(activity);
-            System.out.println(activity + " has been marked as completed.");
+            System.out.println(activity + " è stato segnalato come completata.");
         } else {
-            System.out.println(activity + " is not in the maintenance activities list.");
+            System.out.println(activity + " non è nella lista di attività.");
         }
     }
 
     public void startMaintenance() {
         while (true) {
-            System.out.println("Maintenance Options:");
-            System.out.println("1. Add maintenance activity");
-            System.out.println("2. Check uncompleted activities");
-            System.out.println("3. Mark activity as completed");
-            System.out.println("4. Exit");
+            System.out.println("Opzioni di manutenzioni:");
+            System.out.println("1. Aggiungere un attività di manutenzione");
+            System.out.println("2. Controllare le attività non completate");
+            System.out.println("3. Segnalare un attività com completata");
+            System.out.println("4. Esci");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline
+            scanner.nextLine(); 
 
             switch (choice) {
                 case 1:
-                    System.out.print("Enter the maintenance activity: ");
+                    System.out.print("Scrivere la nuova attività: ");
                     addActivity(scanner.nextLine());
                     break;
                 case 2:
                     checkUncompletedActivities();
                     break;
                 case 3:
-                    System.out.print("Enter the activity to mark as completed: ");
+                    System.out.print("Scgelere l'attività da segnalare come completata: ");
                     markActivityCompleted(scanner.nextLine());
                     break;
                 case 4:
-                    System.out.println("Exiting maintenance activities.");
+                    System.out.println("Uscita della app di manutenzione.");
                     return;
                 default:
-                    System.out.println("Invalid choice. Try again.");
+                    System.out.println("Non valido, Prova di nuovo.");
             }
         }
     }
