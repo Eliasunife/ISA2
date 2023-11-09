@@ -7,15 +7,15 @@ public class maintenanceTest {
     @Test
     public void testAddActivity() {
         maintenance maintenanceClass = new maintenance();
-        maintenanceClass.addActivity("Cambio olio macchina");
-        assertTrue(maintenanceClass.checkUncompletedActivities().contains("cambio olio macchina"));
+        maintenanceClass.addActivity("olio macchina");
+        assertTrue(maintenanceClass.checkUncompletedActivities().contains("olio macchina"));
     }
 
     @Test
     public void testMarkActivityCompleted() {
         maintenance maintenanceClass = new maintenance();
-        maintenanceClass.addActivity("sistemare il frigo");
-        maintenanceClass.markActivityCompleted("sistemare il frigo");
-        assertFalse(maintenanceClass.checkUncompletedActivities().contains("sistemare il frigo"));
+        maintenanceClass.addActivity("sistemare frigo");
+        maintenanceClass.markActivityCompleted("sistemare frigo");
+        assertFalse(maintenanceClass.checkUncompletedActivities().contains("sistemare frigo"));
     }
 }
