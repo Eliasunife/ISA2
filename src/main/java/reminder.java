@@ -5,7 +5,7 @@
 	    private Timer timer = new Timer();
 
 	    public void addReminder(String message, int delayInSeconds) {
-	        System.out.println("Setting a reminder: " + message);
+	        System.out.println("Aggiungere un reminder: " + message);
 
 	        timer.schedule(new TimerTask() {
 	            @Override
