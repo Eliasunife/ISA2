@@ -22,7 +22,16 @@ public class my_shopinglist {
         }
     }
 
-    public List<String> viewItems() {
+   public List<String> viewItems() {
+    	if (items.isEmpty()) {
+            System.out.println("La shopping list è vuota.\n");
+        } else {
+            System.out.println("Ecco gli articoli nella shopping list:");
+            for (String item : items) {
+                System.out.println("- " + item);
+            }
+            System.out.println();
+        }
         return items; 
     }
     
